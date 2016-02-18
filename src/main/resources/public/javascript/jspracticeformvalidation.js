@@ -37,7 +37,7 @@ if (textNumeric3(estassets, "* Please enter numeric values *")) {
 }
 }
 }
-return false;
+
 }
 // Function that checks whether input text is numeric or not.
 function textNumeric3(inputtext, alertMsg) {
