@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="javascript/jspracticeformvalidation.js"></script>
+    <title>Creating an Account </title>
+		<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet_4.css">
+	</head>
+	<body>
+		<header>
+			<h1><img src="logo.jpg" alt="HTML5 Icon">Vista</h1>
+		</header>
+
+		<nav>
+			<ul>
+				<li><a href="file:///C:/Users/sushma/Documents/GitHub/full-stack-web-project-sushmasattuluri/src/main/resources/public/page1_login.html">Home</a></li>
+				<li><a href="">About Us</a></li>
+				<li><a href="file:///C:/Users/sushma/Documents/GitHub/full-stack-web-project-sushmasattuluri/src/main/resources/public/page4_contactus.html">Contact Us</a></li>
+
+				</ul>
+		</nav>
+
+		<p>Create an account</p>
+		<form  onsubmit="return formvalidate()" action="file:///C:/Users/sushma/Documents/GitHub/full-stack-web-project-sushmasattuluri/src/main/resources/public/page1_login.html" method="POST">
+				<table class="t2">
+
+					<tr>
+            <td>Username(6-8 characters):</td>
+						<td><input type="text" id="username" name="username" size="30" required/></td>
+					</tr>
+
+					<tr>
+						<td>Password:</td>
+						<td><input type="password" id="password" name="password" size="30" required/></td>
+
+					</tr>
+					<tr>
+              <td>Confirm Password:</td>
+              <td><input type="password" id="confpassword" name="confpassword" size="30" required/></td>
+						</tr>
+					<tr>
+            <td>First name:</td>
+  					<td><input type="text" id="firstname" name="firstname" size="30" required/></td>
+					</tr>
+					<tr>
+              <td>Last name:</td>
+    					<td><input type="text" id="lastname" name="lastname" size="30" required/></td>
+					</tr>
+					<tr>
+                <td>Email:</td>
+      					<td><input type="text" id="email" name="email" size="30" required/></td>
+					</tr>
+					<tr>
+                <td>Address :</td>
+        				<td><input type="text" id="address" name="address" size="30" required/></td>
+					</tr>
+					<tr>
+                <td>Phone no :</td>
+                <td><input type="number" id="phone" name="phone" size="30" required/></td>
+					</tr>
+					<tr>
+                <td>Employment Status :</td>
+                <td><input type="text" id="status" name="status" size="30" required/></td>
+					</tr>
+					<tr>
+                <td>Occupation :</td>
+                <td><input type="text" id="occupation" name="occupation" size="30" required/></td>
+					</tr>
+					<tr>
+              	<td>Annual Household Income:</td>
+                <td><input type="number" id="income" name="income" size="30" required/></td>
+					</tr>
+					<tr>
+                <td>Estimated Investable Assets :</td>
+                <td><input type="number" id="estassets" name="estassets" size="30" required/></td>
+					</tr>
+					<tr>
+			         <td><input type="reset" id="reset" class="button4" name="reset"/></td>
+               <td><input type="submit" id="submit" class="button5" name="submit" value="Create Account " /></td>
+					</tr>
+
+			 </table>
+		</form>
+
+
+	<footer>
+	Copyright © vistainvestments.com
+	</footer>
+
+</body>
+</html>

@@ -1,0 +1,310 @@
+div.container {
+    position: relative;
+    text-align: center;
+    margin-top:2px;
+}
+
+div.center {
+    position: absolute;
+    font-size: 18px;
+    left: 0%;
+    top: 20%;
+    width: 100%;
+}
+
+div.container img {
+    width: 100%;
+    height: 350px;
+    opacity: 0.3;
+}
+body{
+  background-image: url("../sunset.jpg");
+   background-size: cover;
+  }
+#map {
+        width: 500px;
+        height: 400px;
+      margin-left:350px;
+      margin-top:50px;
+      margin-bottom:100px;
+      }
+header {
+    color:black;
+    text-align:center;
+    padding:30px 0;
+
+}
+
+header img{
+  width:60px;
+  height:60px;
+}
+
+nav ul {
+    background-color:black;
+    overflow:hidden;
+    color:white;
+    text-align:center;
+    padding:10px;
+    margin:0;
+
+}
+a{
+  text-decoration:none;
+  color:white;
+}
+nav ul li{
+  padding:10px;
+  display:inline-block;
+}
+nav ul li:hover{
+  background-color:brown;
+  padding:10px;
+}
+
+section {
+
+    width:100%;
+    float:left;
+    text-align:top;
+    align-self: center;
+    height:400px;
+    font-size:30px;
+}
+footer {
+    background-color:black;
+    color:white;
+
+    text-align:center;
+    padding:5px;
+    position:fixed;
+   bottom:0;
+   width:100%;
+  float:left;
+
+
+}
+form{
+  float:center;
+  text-align:top;
+  align-self: center;
+  font-size: 20px;
+  padding:60px;
+}
+form.form2{
+  float:left;
+  text-align:top;
+  align-self: center;
+  font-size: 30px;
+  padding:100px;
+
+}
+ td {
+    padding: 15px;
+    text-align: left;
+}
+
+.button1 {
+      font-size: 16px;
+      padding: 10px 15px;
+}
+
+.button2 {
+      font-size: 16px;
+      padding: 10px 15px;
+}
+
+.button3 {
+
+    color: black;
+    border: 2px solid brown;
+    font-size: 16px;
+    padding: 10px 15px;
+}
+.button4 {
+      font-size: 16px;
+      padding: 10px 15px;
+}
+.button5 {
+      font-size: 16px;
+      padding: 10px 15px;
+}
+
+.button1:hover {
+    background-color:green;
+
+}
+
+.button3:hover {
+    background-color:brown;
+    color: white;
+}
+
+.button4:hover {
+    background-color:green;
+
+}
+
+
+
+
+p.center{letter-spacing:10px;
+  font-size: .2in;
+  background-color:rgb(100,100,100);
+  text-transform: uppercase;
+  text-align: center;
+  width:350px;
+
+}
+p.p1{
+  font-size: .2in;
+  background-color:#bfbff2;
+}
+p.p2{
+  font-size: .2in;
+  background-color:#bfbff2;
+
+}
+p.p3{
+  font-size: .2in;
+  background-color:#bfbff2;
+
+}
+
+
+h1{
+  letter-spacing:3px;
+  font-size: .5in;
+  text-align: center;
+  height:10px;
+}
+
+h2{
+  margin-top: 1px;
+  letter-spacing:2px;
+  font-size: .4in;
+  text-align: center;
+  text-decoration-color: none;
+}
+
+h3{
+  letter-spacing:2px;
+  font-size: .2in;
+  text-align: center;
+  text-decoration-color: none;
+}
+
+
+p{
+  letter-spacing:1px;
+  font-size: .3in;
+  text-align: center;
+  text-color: white;
+}
+.dropbtn {
+    background-color:  #993300;
+    color: white;
+    padding: 30px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width:90%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.dropbtn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.dropbtn:hover {background-color: #3e8e41}
+
+
+div.dropdown {
+    position: relative;
+    display: inline-block;
+    width:33%;
+    margin-bottom:600px;
+    margin-right:auto;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-right:auto;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 25px;
+    border-style: groove;
+    border-width: 15px;
+    border-color: black;
+    background-color: #bfbff2;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+#box1 {
+width:500px;
+float: left;
+height: 470px;
+background-color: #bfbff2;
+margin-left: 100px;
+padding:10px;
+font-size: 20px;
+margin-bottom: 100px;
+margin-right: 5px;
+}
+#dldt {
+   background: #bfbff2;
+
+}
+#box2{
+ width:500px;
+ float:right;
+ height: 470px;
+ background-color: #bfbff2;
+ padding:10px;
+ font-size: 20px;
+ margin-bottom: 100px;
+ margin-right: 50px;
+
+
+}
+#PickingFunds {
+   background-color:#bfbff2;
+   color:black;
+   margin:10px;
+   padding:20px;
+   margin-left: 100px;
+   font-size: 20px;
+   margin-right: 50px;
+}
+
+table.t1{
+  margin-left: 330px;
+}
+table.t2{
+  margin-left: 330px;
+     width:50%;
+
+}
+#box1 dt{
+  color: brown;
+}
+#box2 dt{
+  color: brown;
+}
