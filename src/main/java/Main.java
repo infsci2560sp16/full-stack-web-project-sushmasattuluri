@@ -1,7 +1,4 @@
-import static javax.measure.unit.SI.KILOGRAM;
-import javax.measure.quantity.Mass;
-import org.jscience.physics.model.RelativisticModel;
-import org.jscience.physics.amount.Amount;import java.sql.*;
+import java.sql.*;
 import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.Map;
@@ -23,14 +20,7 @@ public class Main {
     port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
 
-    get("/hello", (req, res) -> {
-      RelativisticModel.select();
-
-      String energy = System.getenv().get("ENERGY");
-
-      Amount<Mass> m = Amount.valueOf(energy).to(KILOGRAM);
-      return "E=mc^2: " + energy + " = " + m.toString();
-    });
+    get("/hello", (req, res) -> "Hello World");
 
     get("/", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
