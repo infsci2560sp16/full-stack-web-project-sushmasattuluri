@@ -9,7 +9,7 @@ var email = document.getElementById("email");
 var address = document.getElementById("address");
 var phone = document.getElementById("phone");
 var status = document.getElementById("status");
-var occupation = document.getElementById"'occupation");
+var occupation = document.getElementById("occupation");
 var income = document.getElementById("income");
 var estassets = document.getElementById("estassets");
 
@@ -39,7 +39,7 @@ return true;
 
 return false;
 }
-return false;
+
 }
 // Function that checks whether input text is numeric or not.
 function textNumeric3(inputtext, alertMsg) {
