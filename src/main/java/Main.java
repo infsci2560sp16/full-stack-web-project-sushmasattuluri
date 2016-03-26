@@ -28,7 +28,7 @@ public class Main {
 
             return new ModelAndView(attributes, "index.ftl");
         }, new FreeMarkerEngine());
-        */
+      */
 
     get("/db", (req, res) -> {
       Connection connection = null;
@@ -58,19 +58,19 @@ public class Main {
 
     get("/", (request, response) -> {
 
-    /*  Map<String, Object> attributes = new HashMap<>();
+     Map<String, Object> attributes = new HashMap<>();
         attributes.put("message", "Hello World!");
-        */
 
 
-                 ArrayList<String> users_list = new ArrayList<String>();
+
+            /*     ArrayList<String> users_list = new ArrayList<String>();
                  users_list.add("tenthousand");
                 users_list.add("twentythousand");
 
 
                 Map<String, Object> attributes = new HashMap<>();
                  attributes.put("messages", users_list);
-
+*/
 
                   return new ModelAndView(attributes, "users.ftl");
                }, new FreeMarkerEngine());
