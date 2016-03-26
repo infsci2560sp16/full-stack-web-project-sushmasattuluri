@@ -77,7 +77,7 @@ public class Main {
                }, new FreeMarkerEngine());
 
 */
-get("/", (req, res) -> {
+get("/users", (req, res) -> {
              ArrayList<String> users = new ArrayList<String>();
              users.add("John Doe");
              users.add("Tony Doe");
@@ -92,6 +92,30 @@ get("/", (req, res) -> {
 
               return new ModelAndView(attributes, "users.ftl");
            }, new FreeMarkerEngine());
+
+           Gson gson = new Gson();
+
+   get("/api/about", (req, res) -> {
+                    Map<String, Object> data = new HashMap<>();
+                    data.put("title", "Professor");
+                    data.put("name", "Brian");
+                    data.put("description", "INFSCI 2560");
+                    data.put("profession", "Education");
+                    return data;
+                }, gson::toJson);
+
+    get("/api/time/now", (req, res) -> {
+                      Map<String, Object> data = new HashMap<>();
+                      data.put("currentTime", new Date());
+                      return data;
+                  }, gson::toJson);
+
+    get("/api/time/now.xml", (req, res) -> {
+                      Map<String, Object> data = new HashMap<>();
+                      data.put("currentTime", new Date());
+                      return data;
+                  }, gson::toJson);
+
 
   }
 
