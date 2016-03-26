@@ -25,16 +25,17 @@
 
 
 	<div class="data_from_server">
-<p> Welcome
+<p> Pricing :The more you invest ,the less you pay for fees.</p>
+
   <ul>
      <#list messages as message>
-     
 
 
-  <#if message  == "Micheal">
-    We have recommended three goals based on your income.
+
+  <#if message  <= 10,000 >
+     0 -  ${message} Annual fee = 0.35%
   <#else>
-    Recommended Investment goals based on your age and income.
+  more than ${message}  Annual fee = 0.15%
   </#if>
   </#list>
 </ul>

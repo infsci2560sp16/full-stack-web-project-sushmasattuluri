@@ -56,15 +56,15 @@ public class Main {
       }
     }, new FreeMarkerEngine());
 
-    get("/", (req, res) -> {
+    get("/", (request, response) -> {
 
     /*  Map<String, Object> attributes = new HashMap<>();
         attributes.put("message", "Hello World!");
         */
                  ArrayList<String> users_list = new ArrayList<String>();
-                 users_list.add("Micheal");
-                users_list.add("James");
-                 users_list.add("Robert");
+                 users_list.add("10000");
+                users_list.add("20000");
+
 
                  Map<String, Object> attributes = new HashMap<>();
                  attributes.put("messages", users_list);
