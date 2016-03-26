@@ -25,12 +25,19 @@
 
 
 	<div class="data_from_server">
-<p> Welcome ${message}
+<p> Welcome
+  <ul>
+     <#list messages as message>
+     
+
+
   <#if message  == "Micheal">
     We have recommended three goals based on your income.
   <#else>
     Recommended Investment goals based on your age and income.
   </#if>
+  </#list>
+</ul>
 </p>
 </div>
 

@@ -67,7 +67,7 @@ public class Main {
                  users_list.add("Robert");
 
                  Map<String, Object> attributes = new HashMap<>();
-                 attributes.put("message", users_list);
+                 attributes.put("messages", users_list);
 
 
                   return new ModelAndView(attributes, "users.ftl");
