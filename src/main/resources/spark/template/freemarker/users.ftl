@@ -25,21 +25,18 @@
 
 
 	<div class="data_from_server">
-<p> Pricing :The more you invest ,the less you pay for fees.</p>
+<p> Pricing :The more you invest ,the less you pay for fees.
 
-  <ul>
+  $<messages>
      <#list messages as message>
-
-
-
   <#if message  <= 10,000 >
-     0 -  ${message} Annual fee = 0.35%
+     0 -  ${message}, Annual fee = 0.35%
   <#else>
-  more than ${message}  Annual fee = 0.15%
+  more than ${message} ,  Annual fee = 0.15%
   </#if>
   </#list>
-</ul>
 
+</p>
 </div>
 
   <p>Select your first goal to begin</p>
