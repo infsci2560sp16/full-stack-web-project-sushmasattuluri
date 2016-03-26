@@ -60,7 +60,12 @@
     <p> Pricing :The more you invest ,the less you pay for fees.</p>
 
     <#list users as user>
-                      <li> ${user} </li>
+                       ${user} 
+                      <#if user  == "John Doe" >
+          Annual fee = 0.35%
+      <#else>
+      Annual fee = 0.15%
+      </#if>
                         </#list>
 
     </div>
