@@ -59,17 +59,17 @@ public class Main {
     get("/", (req, res) -> {
 
       Map<String, Object> attributes = new HashMap<>();
-        attributes.put("message", "Hello World!");
-        /*
+      /*  attributes.put("message", "Hello World!");
+        */
                  ArrayList<String> users_list = new ArrayList<String>();
                  users_list.add("Micheal");
-                users.add("James");
-                 users.add("Robert");
+                users_list.add("James");
+                 users_list.add("Robert");
 
                  Map<String, Object> attributes = new HashMap<>();
-                 attributes.put("user", users_list);
+                 attributes.put("message", users_list);
 
-*/
+
                   return new ModelAndView(attributes, "users.ftl");
                }, new FreeMarkerEngine());
 

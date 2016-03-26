@@ -24,6 +24,16 @@
   </nav>
 
 
+	<div class="data_from_server">
+<p> Welcome ${message}
+  <#if message  == "Micheal">
+    We have recommended three goals based on your income.
+  <#else>
+    Recommended Investment goals based on your age and income.
+  </#if>
+</p>
+</div>
+
   <p>Select your first goal to begin</p>
 
   <div class="dropdown">
@@ -54,14 +64,6 @@
         </div>
       </div>
 
-			<div class="data_from_server">
-
-<p>12345</p>
-
-                <p>    ${message} </p>
-
-
-                </div>
 
   <footer>
   Copyright © vistainvestments.com
