@@ -39,7 +39,7 @@
   </#if>
   </#list>
 </ul>
-</p>
+
 </div>
 
   <p>Select your first goal to begin</p>
