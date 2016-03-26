@@ -56,9 +56,9 @@
 
 			<div class="data_from_server">
 
-            
 
-                    ${users}
+
+                <p>    ${user} </p>
 
                 </div>
 

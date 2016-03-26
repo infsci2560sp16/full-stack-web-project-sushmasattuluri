@@ -25,12 +25,13 @@ public class Main {
     get("/hello", (req, res) -> "Hello World");
 
 
-    get("/", (request, response) -> {
+  /*  get("/", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
             attributes.put("message", "Hello World!");
 
             return new ModelAndView(attributes, "index.ftl");
         }, new FreeMarkerEngine());
+    */
 
     get("/db", (req, res) -> {
       Connection connection = null;
@@ -59,13 +60,14 @@ public class Main {
     }, new FreeMarkerEngine());
 
     get("/users", (req, res) -> {
-                 ArrayList<String> users = new ArrayList<String>();
-                 users.add("Micheal");
-                 users.add("James");
+                 ArrayList<String> users_list = new ArrayList<String>();
+                 users_list.add("Micheal");
+                /* users.add("James");
                  users.add("Robert");
+                 */
 
                  Map<String, Object> attributes = new HashMap<>();
-                 attributes.put("users", users);
+                 attributes.put("user", users_list);
 
 
                   return new ModelAndView(attributes, "users.ftl");
