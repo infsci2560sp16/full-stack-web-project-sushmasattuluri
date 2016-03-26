@@ -81,10 +81,13 @@ get("/", (req, res) -> {
              ArrayList<String> users = new ArrayList<String>();
              users.add("John Doe");
              users.add("Tony Doe");
-             
+
 
              Map<String, Object> attributes = new HashMap<>();
              attributes.put("users", users);
+
+             Map<String, Object> root = new HashMap<>();
+             root.put("message", "The more you invest ,the less you pay for fees.");
 
 
               return new ModelAndView(attributes, "users.ftl");

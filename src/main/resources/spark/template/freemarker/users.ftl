@@ -29,7 +29,7 @@
 
       <div class="data_from_server">
     <h2> Pricing <h2><br>
-      <p>The more you invest ,the less you pay for fees.</p>
+      ${message}
 
     <#list users as user>
 
