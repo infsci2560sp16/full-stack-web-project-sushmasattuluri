@@ -81,7 +81,7 @@ get("/", (req, res) -> {
              ArrayList<String> users = new ArrayList<String>();
              users.add("John Doe");
              users.add("Tony Doe");
-             users.add("test one");
+             
 
              Map<String, Object> attributes = new HashMap<>();
              attributes.put("users", users);

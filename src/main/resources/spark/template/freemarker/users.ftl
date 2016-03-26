@@ -26,45 +26,19 @@
 
 
 
-  <p>Select your first goal to begin</p>
-
-  <div class="dropdown">
-  <button type="button" class="dropbtn">Safety Net</button>
-  <div  class="dropdown-content">
-    <p class="p1">Grow your savings to cover 3 to 6 months of unplanned expenses in a conservatively invested portfolio.40%stocks and 60%bonds</p>
-    <img src="test4.jpg" alt="HTML5 Icon" style="width:auto;height:350px;">
-    <a href="">Select this goal -----     Safety Net    </a>
-
-    </div>
-  </div>
-
-  <div class="dropdown">
-  <button type="button" class="dropbtn">Retirement</button>
-  <div  class="dropdown-content">
-    <p class="p2">Invest long-term with a target of $1,827,000 for an annual retirement income of $89,037. This can be a regular investment account, or an IRA account.90%stocks and 10%bonds</p>
-    <img src="test5.jpg" alt="HTML5 Icon" style="width:auto;height:350px;">
-    <a href="">Select this goal</a>
-      </div>
-    </div>
-
-      <div class="dropdown">
-     <button type="button" class="dropbtn">General Investment</button>
-     <div  class="dropdown-content">
-       <p class="p3">Grow and preserve capital over time. This is an excellent goal type for unknown future needs or money you plan to pass to future generations.80%stocks and 20%bonds</p>
-       <img src="test6.jpg" alt="HTML5 Icon"  style="width:auto;height:350px;">
-       <a href="">Select this goal</a>
-        </div>
-      </div>
 
       <div class="data_from_server">
-    <p> Pricing :The more you invest ,the less you pay for fees.</p>
+    <h2> Pricing <h2><br>
+      <p>The more you invest ,the less you pay for fees.</p>
 
     <#list users as user>
-                       ${user} 
+
                       <#if user  == "John Doe" >
+          <p>Investment less than  $10,000 :</p><br>
           Annual fee = 0.35%
       <#else>
-      Annual fee = 0.15%
+    <p>  Investment greater than  $10,000 :</p><br>
+     Annual fee = 0.15%
       </#if>
                         </#list>
 
