@@ -58,7 +58,7 @@ public class Main {
       }
     }, new FreeMarkerEngine());
 
-    get("/", (req, res) -> {
+    get("/users", (req, res) -> {
                  ArrayList<String> users = new ArrayList<String>();
                  users.add("Micheal");
                  users.add("James");
