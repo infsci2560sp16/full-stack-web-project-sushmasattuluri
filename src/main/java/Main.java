@@ -58,8 +58,8 @@ public class Main {
 
     get("/", (req, res) -> {
 
-      Map<String, Object> attributes = new HashMap<>();
-      /*  attributes.put("message", "Hello World!");
+    /*  Map<String, Object> attributes = new HashMap<>();
+        attributes.put("message", "Hello World!");
         */
                  ArrayList<String> users_list = new ArrayList<String>();
                  users_list.add("Micheal");
