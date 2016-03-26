@@ -22,7 +22,7 @@ public class Main {
    port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
 
-    get("/hello", (req, res) -> "Hello World");
+    get("/hello", (req, res) -> "Hello World567");
 
 
     get("/", (request, response) -> {
@@ -59,12 +59,12 @@ public class Main {
       }
     }, new FreeMarkerEngine());
 
-    get("/users", (req, res) -> {
+  /*  get("/users", (req, res) -> {
                  ArrayList<String> users_list = new ArrayList<String>();
                  users_list.add("Micheal");
-                /* users.add("James");
+                users.add("James");
                  users.add("Robert");
-                 */
+
 
                  Map<String, Object> attributes = new HashMap<>();
                  attributes.put("user", users_list);
@@ -73,7 +73,7 @@ public class Main {
                   return new ModelAndView(attributes, "users.ftl");
                }, new FreeMarkerEngine());
 
-
+*/
 
 
   }
