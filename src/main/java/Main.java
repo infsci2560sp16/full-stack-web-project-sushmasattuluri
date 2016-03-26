@@ -56,8 +56,8 @@ public class Main {
       }
     }, new FreeMarkerEngine());
 
-    get("/", (request, response) -> {
-
+  /*  get("/", (request, response) -> {
+/*
      Map<String, Object> attributes = new HashMap<>();
         attributes.put("message", "Hello World!");
 
@@ -70,11 +70,25 @@ public class Main {
 
                 Map<String, Object> attributes = new HashMap<>();
                  attributes.put("messages", users_list);
-*/
+
+
 
                   return new ModelAndView(attributes, "users.ftl");
                }, new FreeMarkerEngine());
 
+*/
+get("/", (req, res) -> {
+             ArrayList<String> users = new ArrayList<String>();
+             users.add("John Doe");
+             users.add("Tony Doe");
+             users.add("test one");
+
+             Map<String, Object> attributes = new HashMap<>();
+             attributes.put("users", users);
+
+
+              return new ModelAndView(attributes, "users.ftl");
+           }, new FreeMarkerEngine());
 
   }
 

@@ -59,7 +59,9 @@
       <div class="data_from_server">
     <p> Pricing :The more you invest ,the less you pay for fees.</p>
 
-  ${message}
+    <#list users as user>
+                      <li> ${user} </li>
+                        </#list>
 
     </div>
 
