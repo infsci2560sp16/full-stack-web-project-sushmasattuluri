@@ -25,13 +25,13 @@ public class Main {
     get("/hello", (req, res) -> "Hello World");
 
 
-  /*  get("/", (request, response) -> {
+    get("/", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
-            attributes.put("message", "Hello World!");
+            attributes.put("message", "Hello World123!");
 
             return new ModelAndView(attributes, "index.ftl");
         }, new FreeMarkerEngine());
-    */
+
 
     get("/db", (req, res) -> {
       Connection connection = null;
