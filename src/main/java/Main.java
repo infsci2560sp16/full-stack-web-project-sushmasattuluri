@@ -86,8 +86,8 @@ get("/", (req, res) -> {
              Map<String, Object> attributes = new HashMap<>();
              attributes.put("users", users);
 
-             Map<String, Object> root = new HashMap<>();
-             root.put("message", "The more you invest ,the less you pay for fees.");
+
+             attributes.put("message", "The more you invest ,the less you pay for fees.");
 
 
               return new ModelAndView(attributes, "users.ftl");
