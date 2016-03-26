@@ -56,10 +56,10 @@
 
 			<div class="data_from_server">
 
-                    <span>list the timelines you built </span>
-                    <#list users as user>
-                    <li> ${user} </li>
-                      </#list>
+            
+
+                    ${users}
+
                 </div>
 
   <footer>
