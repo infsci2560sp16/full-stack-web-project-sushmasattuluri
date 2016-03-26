@@ -25,7 +25,7 @@
 
 
 	<div class="data_from_server">
-<p> Pricing :The more you invest ,the less you pay for fees.
+<p> Pricing :The more you invest ,the less you pay for fees.</p>
 
   $<messages>
      <#list messages as message>
@@ -36,7 +36,7 @@
   </#if>
   </#list>
 
-</p>
+
 </div>
 
   <p>Select your first goal to begin</p>

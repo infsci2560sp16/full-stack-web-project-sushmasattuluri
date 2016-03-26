@@ -61,14 +61,14 @@ public class Main {
     /*  Map<String, Object> attributes = new HashMap<>();
         attributes.put("message", "Hello World!");
         */
-         Map<String, Object> attributes = new HashMap<>();
-         
+
+
                  ArrayList<String> users_list = new ArrayList<String>();
                  users_list.add("10000");
                 users_list.add("20000");
 
 
-
+                Map<String, Object> attributes = new HashMap<>();
                  attributes.put("messages", users_list);
 
 
