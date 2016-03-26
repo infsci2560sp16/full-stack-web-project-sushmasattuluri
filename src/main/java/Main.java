@@ -64,8 +64,8 @@ public class Main {
 
 
                  ArrayList<String> users_list = new ArrayList<String>();
-                 users_list.add("10000");
-                users_list.add("20000");
+                 users_list.add("tenthousand");
+                users_list.add("twentythousand");
 
 
                 Map<String, Object> attributes = new HashMap<>();

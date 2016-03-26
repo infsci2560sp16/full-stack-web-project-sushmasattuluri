@@ -28,8 +28,12 @@
 <p> Pricing :The more you invest ,the less you pay for fees.</p>
 
   $<messages>
+    <#list messages as message>
+${message}
+</#list>
+
      <#list messages as message>
-  <#if message  <= 10,000 >
+  <#if message  == tenthousand >
      0 -  ${message}, Annual fee = 0.35%
   <#else>
   more than ${message} ,  Annual fee = 0.15%
