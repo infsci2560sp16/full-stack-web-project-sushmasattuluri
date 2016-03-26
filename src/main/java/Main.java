@@ -56,7 +56,7 @@ public class Main {
       }
     }, new FreeMarkerEngine());
 
-    get("/", (request, response) -> {
+    get("/page3_welcome", (request, response) -> {
 
     /*  Map<String, Object> attributes = new HashMap<>();
         attributes.put("message", "Hello World!");
