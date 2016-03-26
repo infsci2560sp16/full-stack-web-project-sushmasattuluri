@@ -24,24 +24,7 @@
   </nav>
 
 
-	<div class="data_from_server">
-<p> Pricing :The more you invest ,the less you pay for fees.</p>
 
-  $<messages>
-    <#list messages as message>
-${message}
-</#list>
-
-     <#list messages as message>
-  <#if message  == tenthousand >
-     0 -  ${message}, Annual fee = 0.35%
-  <#else>
-  more than ${message} ,  Annual fee = 0.15%
-  </#if>
-  </#list>
-
-
-</div>
 
   <p>Select your first goal to begin</p>
 
@@ -72,6 +55,25 @@ ${message}
        <a href="">Select this goal</a>
         </div>
       </div>
+
+      <div class="data_from_server">
+    <p> Pricing :The more you invest ,the less you pay for fees.</p>
+
+    
+        <#list messages as message>
+    ${message}
+    </#list>
+
+         <#list messages as message>
+      <#if message  == tenthousand >
+         0 -  ${message}, Annual fee = 0.35%
+      <#else>
+      more than ${message} ,  Annual fee = 0.15%
+      </#if>
+      </#list>
+
+
+    </div>
 
 
   <footer>
