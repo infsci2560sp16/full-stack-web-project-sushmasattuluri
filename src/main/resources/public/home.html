@@ -2,10 +2,31 @@
 <html>
 <meta charset="UTF-8"/>
 <title>Home Form</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+<script>
+$(function()
+{
+  $.ajax
+  (
+    {
+      url:"/api/about",
+      success: function(result)
+      {
+        var result=JSON.parse(result);
+        $("#h1").html(result.title);
+        $("#p1").html(result.content);
+      }
+    }
+  );
+});
+</script>
 
 <body>
-<form action="https://lit-hollows-3026.herokuapp.com/api/home" method="get">
-  <input type="submit"  value="click me" />
+
+  <div  id="content1">
+			<h2 id="h1">test1 sport</h2>
+			<p id="p1">content sport</p>
 </form>
 </body>
 </html>

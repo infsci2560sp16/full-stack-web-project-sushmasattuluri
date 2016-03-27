@@ -105,6 +105,14 @@ get("/", (req, res) -> {
                     return data;
                 }, gson::toJson);
 
+
+                get("/api/about", (req, res) -> {
+                                Map<String, Object> data = new HashMap<>();
+                                data.put("title", "sport");
+                                data.put("content", "Brian");
+                                return data;
+                            }, gson::toJson);
+
   /*  get("/api/time/now", (req, res) -> {
                       Map<String, Object> data = new HashMap<>();
                       data.put("currentTime", new Date());
