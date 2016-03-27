@@ -96,7 +96,7 @@ get("/", (req, res) -> {
 
            Gson gson = new Gson();
 
-   get("/api/about", (req, res) -> {
+   get("/home", (req, res) -> {
                     Map<String, Object> data = new HashMap<>();
                     data.put("title", "Professor");
                     data.put("name", "Brian");
