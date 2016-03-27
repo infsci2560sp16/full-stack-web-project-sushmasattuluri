@@ -10,6 +10,7 @@ import static spark.Spark.*;
 import spark.template.freemarker.FreeMarkerEngine;
 import spark.ModelAndView;
 import static spark.Spark.get;
+import com.google.gson.Gson;
 
 import com.heroku.sdk.jdbc.DatabaseUrl;
 
@@ -104,7 +105,7 @@ get("/", (req, res) -> {
                     return data;
                 }, gson::toJson);
 
-    get("/api/time/now", (req, res) -> {
+  /*  get("/api/time/now", (req, res) -> {
                       Map<String, Object> data = new HashMap<>();
                       data.put("currentTime", new Date());
                       return data;
@@ -116,7 +117,7 @@ get("/", (req, res) -> {
                       return data;
                   }, gson::toJson);
 
-
+*/
   }
 
 }
