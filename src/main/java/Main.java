@@ -110,10 +110,7 @@ get("/", (req, res) -> {
                                 Map<String, Object> data = new HashMap<>();
                                 data.put("title", "sport1");
                                 data.put("content", "Brian1");
-                                data.put("title", "sport2");
-                                data.put("content", "Brian2");
-                                data.put("title", "sport3");
-                                data.put("content", "Brian3");
+                              
                                 return data;
                             }, gson::toJson);
 
