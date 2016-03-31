@@ -106,21 +106,24 @@ get("/", (req, res) -> {
                 }, gson::toJson);
 
 
-                get("/api/about", (req, res) -> {
+    get("/api/about", (req, res) -> {
                                 Map<String, Object> data = new HashMap<>();
                                 data.put("title", "sport1");
                                 data.put("content", "Brian1");
-                              
+
                                 return data;
                             }, gson::toJson);
 
-  /*  get("/api/time/now", (req, res) -> {
+
+
+
+    get("/api/time/now", (req, res) -> {
                       Map<String, Object> data = new HashMap<>();
                       data.put("currentTime", new Date());
                       return data;
                   }, gson::toJson);
 
-    get("/api/time/now.xml", (req, res) -> {
+  /*  get("/api/time/now.xml", (req, res) -> {
                       Map<String, Object> data = new HashMap<>();
                       data.put("currentTime", new Date());
                       return data;
