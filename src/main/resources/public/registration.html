@@ -34,60 +34,8 @@
    <p id="errFname" class="errText"></p>
    <p><label for="lname">Last Name*</label><input type="text" class="required" name="lname" id="lname"/></p>
    <p id="errLname" class="errText"></p>
-   <p><label for="male">Gender*</label><input type="radio" class="required" name="gender" id="male" value="male" checked/>&nbsp;Male&nbsp;&nbsp;<input type="radio"
-   name="gender" id="female" value="female"/>&nbsp;Female</p>
-   <p id="errGender" class="errText"></p>
-   <p><label for="language"> Native Language*</label>
-    <select name="language" class="required" id="language" onChange="showOther(this)">
-    <option value ="chinese" selected="selected">Chinese</option>
-    <option value="english">English</option>
-    <option value="french">French</option>
-    <option value="german">German</option>
-    <option value="hindi">Hindi</option>
-    <option value ="japanese">Japanese</option>
-    <option value ="korean">Korean</option>
-    <option value ="portuguese">Portuguese</option>
-    <option value="russian">Russian</option>
-    <option value="spanish">Spanish</option>
-    <option value="other">Other</option>
-    </select>
-    <input type="text" id="nother" placeholder="Native Language"/>
-   </p>
-   <p><label for="planguage"> Practise Language*</label>
-    <select name="planguage" class="required" id="planguage" onChange="showOther(this)">
-    <option value ="chinese" >Chinese</option>
-    <option value="english" selected="selected">English</option>
-    <option value="french">French</option>
-    <option value="german">German</option>
-    <option value="hindi">Hindi</option>
-    <option value ="japanese">Japanese</option>
-    <option value ="korean">Korean</option>
-    <option value ="portuguese">Portuguese</option>
-    <option value="russian">Russian</option>
-    <option value="spanish">Spanish</option>
-    <option value="other">Other</option>
-    </select>
-    <input type="text" id="pother" placeholder="Practise Language"/>
-   </p>
-   <p>
-   <label for="topic">Interested Topic</label>
-    <select name="topic" id="topic" onChange="showOther(this)">
-    <option value="animals" selected="selected">Animals</option>
-    <option value ="beauty">Beauty</option>
-    <option value="books">Books</option>
-    <option value="cooking">Cooking</option>
-    <option value="culture">Culture</option>
-    <option value="movies">Movies</option>
-    <option value="music">Music</option>
-    <option value ="sports">Sports</option>
-    <option value ="technology">Technology</option>
-    <option value ="television">Television</option>
-    <option value="travel">Travel</option>
-    <option value="other">Other</option>
-    </select>
-    <input type="button" name="add" value="Add Another" onClick="addAnother()"/>(Maximum:3)
-   </p>
-   <p id="newtopic"></p>
+  
+
    <p id="rbutton"><input type="submit" value="Submit" id="submit"/></p>
    </fieldset>
   </form>

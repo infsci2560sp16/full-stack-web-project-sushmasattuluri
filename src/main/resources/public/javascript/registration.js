@@ -8,14 +8,9 @@ $(function(){
         var email = $("#email").val();
         var fname = $("#fname").val();
         var lname =$("#lname").val();
-				var gender =$('input:radio[name="gender"]:checked').val();
-				var language =$("#language").val();
-				var planguage =$("#planguage").val();
-				var topic =$("#topic").val();
 
         var obj = JSON.stringify({"username":username,"password":password,
-																	"email":email,"fname":fname,"lname":lname,
-																	"gender":gender,"language":language,"planguage":planguage,"topic":topic});
+																	"email":email,"fname":fname,"lname":lname});
               $.ajax({
                   contentType:'application/json',
                   url: '/api/register',
