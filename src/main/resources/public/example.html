@@ -39,6 +39,12 @@
                    }
                  });
                }*/
+
+function submitTest(){
+  alert("Submit test....!");
+		return true;
+}
+
   $function() {
        $("#submit").click(function(){
          alert("Welcome! You have registered successfully.. not really!");
@@ -69,7 +75,7 @@
         <input type="button" value="GetXml" onclick="getXml()">
         <div class="about"></div>
 -->
-<form id="register" method="post" action="#"  onsubmit="return true">
+<form id="register" method="post" action="#"  onsubmit="return submitTest()">
   <fieldset>
     <legend>Register</legend>
         <p><label for="username">Username*</label><input type="text" class="required" name="username" id="username" placeholder="6-12 characters"/></p>
