@@ -4,6 +4,7 @@
         <title>GetJson</title>
         <meta charset="UTF-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/registration.js"></script>
         <script>
   /*      function getJson() {
           $.ajax({
@@ -39,35 +40,6 @@
                    }
                  });
                }*/
-
-function submitTest(){
-  alert("Submit test....!");
-		return true;
-}
-
-  $function() {
-       $("#submit").click(function(){
-         alert("Welcome! You have registered successfully.. not really!");
-              var username = $("#username").val();
-              var password = $("#password").val();
-              var obj = JSON.stringify({"username":username,"password":password});
-
-              $.ajax({
-             		url : "/api/register",
-             		type : "POST",
-                contentType:'application/json',
-             		dataType: "json",
-             		data : obj,
-            		success : function(data) {
-                  alert("Welcome! You have registered successfully!");
-                  window.location.href='/index.html'
-                  console.log(data);
-                }
-          	});
-            return false;
-        });
-  });
-
         </script>
     </head>
     <body>
