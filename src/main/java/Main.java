@@ -32,12 +32,64 @@ public class Main {
     port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
 
+    Gson gson = new Gson();
+
+    new FlowerController(new FlowerService());
+
+    get("/users", (req, res) -> {
+                 ArrayList<String> users = new ArrayList<String>();
+                 users.add("John Doe");
+                 users.add("Tony Doe");
+                 Map<String, Object> attributes = new HashMap<>();
+                 attributes.put("users", users);
+                 attributes.put("message", "The more you invest ,the less you pay for fees.");
+                  return new ModelAndView(attributes, "users.ftl");
+               }, new FreeMarkerEngine());
+
+       get("/about", (req, res) -> {
+
+                       Connection connection = null;
+                       // res.type("application/xml"); //Return as XML
+
+                       Map<String, Object> attributes = new HashMap<>();
+                       try {
+
+
+                           String xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
+                           xml += "<About>";
+
+                               xml += "<Branch>";
+                               xml += "<Name>Orchid Flower</Name>";
+                               xml += "<Profession>Retailer</Profession>";
+                               xml += "<Since>2016</Since>";
+                               xml += "<Country>United States</Country>";
+                               xml += "<State>Pennsylvania</State>";
+                               xml += "<City>Pittsburgh</City>";
+                               xml += "<OpenHour>9am-8pm</OpenHour>";
+                               xml += "<Phone>111-222-3333</Phone>";
+                               xml += "<Email>huz26@pitt.edu</Email>";
+                               xml += "<Address>4200 Fifth Ave</Address>";
+                               xml += "</Branch>";
+
+                           xml += "</About>";
+                           res.type("text/xml");
+                           return xml;
+
+                       } catch (Exception e) {
+                           attributes.put("message", "There was an error: " + e);
+                           return attributes;
+                       } finally {
+                           if (connection != null) try{connection.close();} catch(SQLException e){}
+                       }
+                   });
+
+
+
     //get("/hello", (req, res) -> "Hello World");
 
   /* get("/", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
             attributes.put("message", "Hello World!");
-
             return new ModelAndView(attributes, "index.ftl");
         }, new FreeMarkerEngine());
       */
@@ -76,8 +128,10 @@ public class Main {
         try {
           connection = DatabaseUrl.extract().getConnection();
           JSONObject obj = new JSONObject(req.body());
-          String username= obj.getString("username");
-          String password = obj.getString("password");
+          String username= "sushma";
+           String password ="password";
+          // String username= obj.getString("username");
+          //String password = obj.getString("password");
           // String email = obj.getString("email");
           // String fname = obj.getString("fname");
           // String lname = obj.getString("lname");
@@ -109,24 +163,8 @@ public class Main {
 
 
 
-get("/users", (req, res) -> {
-             ArrayList<String> users = new ArrayList<String>();
-             users.add("John Doe");
-             users.add("Tony Doe");
-
-
-             Map<String, Object> attributes = new HashMap<>();
-             attributes.put("users", users);
-
-
-             attributes.put("message", "The more you invest ,the less you pay for fees.");
-
-
-              return new ModelAndView(attributes, "users.ftl");
-           }, new FreeMarkerEngine());
-
-           Gson gson = new Gson();
-
+   //
+   //
   //  get("/api/home", (req, res) -> {
   //                   Map<String, Object> data = new HashMap<>();
   //                   data.put("title", "Professor");
@@ -135,17 +173,17 @@ get("/users", (req, res) -> {
   //                   data.put("profession", "Education");
   //                   return data;
   //               }, gson::toJson);
-
-
-    // get("/api/about", (req, res) -> {
-    //                             Map<String, Object> data = new HashMap<>();
-    //                             data.put("title", "sport1");
-    //                             data.put("content", "Brian1");
-    //
-    //                             return data;
-    //                         }, gson::toJson);
-
-
+   //
+   //
+  //   get("/api/about", (req, res) -> {
+  //                               Map<String, Object> data = new HashMap<>();
+  //                               data.put("title", "sport1");
+  //                               data.put("content", "Brian1");
+  //
+  //                               return data;
+  //                           }, gson::toJson);
+   //
+   //
 
     //
     // get("/api/time/now", (req, res) -> {
