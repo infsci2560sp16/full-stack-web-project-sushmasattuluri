@@ -121,7 +121,7 @@ public class Main {
     // }, new FreeMarkerEngine());
 
   //  POST JSON
-    post("/api/register", (req, res) -> {
+    post("api/register", (req, res) -> {
           Connection connection = null;
           //Testing
           System.out.println(req.body());
