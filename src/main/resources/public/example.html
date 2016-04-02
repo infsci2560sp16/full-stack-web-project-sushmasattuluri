@@ -40,16 +40,13 @@
                  });
                }
      function function() {
-       alert("Welcome! You have registered successfully.. not really!");
-
        $("#submit").click(function(){
-
+         alert("Welcome! You have registered successfully.. not really!");
               var username = $("#username").val();
               var password = $("#password").val();
               var obj = JSON.stringify({"username":username,"password":password});
 
               $.ajax({
-                alert("Welcome! You have registered successfully!..inside ajax");
              		url : "/api/register",
              		type : "POST",
                 contentType:'application/json',
