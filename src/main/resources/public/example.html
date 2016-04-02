@@ -40,18 +40,18 @@
                  });
                }
      function postjson() {
-       alert("Welcome! You have registered successfully.. not really!");
+       //alert("Welcome! You have registered successfully.. not really!");
              //	var obj = JSON.stringify({"make" : $( "#make" ).val()});
-//             	$.ajax({
-             		//contentType:'application/json',
-  //           		url : "api/register",
-  //           		type : "post",
-             	//	dataType: "json",
+            	$.ajax({
+             		contentType:'application/json',
+             		url : "api/register",
+             		type : "post",
+             		dataType: "json",
              	//	data : obj,
-  //           		success : function() {
-  //                alert("Welcome! You have registered successfully!");
-  //           		}
-  //           	});
+            		success : function() {
+                  alert("Welcome! You have registered successfully!");
+             		}
+             	});
              }
 
         </script>
