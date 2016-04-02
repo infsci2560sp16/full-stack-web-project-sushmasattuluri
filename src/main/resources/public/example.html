@@ -41,10 +41,10 @@
                }
      function postjson() {
        alert("Welcome! You have registered successfully.. not really!");
-              //var username = "sushma";
-             	//var obj = JSON.stringify({"username":username});
-              var obj ="123";
+              var username = "123";
+             	var obj = JSON.stringify({"username":username});
             	$.ajax(
+                  alert("Welcome! You have registered successfully!..inside ajax");
              		url : "/api/register",
              		type : "POST",
                 contentType:'application/json',
