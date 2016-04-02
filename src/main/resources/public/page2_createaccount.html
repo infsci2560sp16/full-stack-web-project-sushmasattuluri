@@ -24,7 +24,7 @@
 		</nav>
 
 		<p>Create an account</p>
-		<form  onsubmit= "return formvalidate()" action="registration.js">
+		<form>
 				<table class="t2">
 
 					<tr>
@@ -53,7 +53,7 @@
                 <td>Email:</td>
       					<td><input type="text" id="email" name="email" size="30" required/></td>
 					</tr>
-					<tr>
+					<!-- <tr>
                 <td>Address :</td>
         				<td><input type="text" id="address" name="address" size="30" required/></td>
 					</tr>
@@ -76,10 +76,11 @@
 					<tr>
                 <td>Estimated Investable Assets :</td>
                 <td><input type="number" id="estassets" name="estassets" size="30" required/></td>
-					</tr>
+					</tr>-->
 					<tr>
 			         <td><input type="reset" id="reset" class="button4" name="reset"/></td>
-               <td><input type="submit" id="submit" class="button5" name="submit" value="Create Account " /></td>
+               <td><input type="submit" id="submit" class="button5" name="submit" value="Create Account " onclick="register()" /></td>
+							<!-- <input id="regis-login-button" type="button" value="submit" onclick="register()">  -->
 					</tr>
 
 			 </table>

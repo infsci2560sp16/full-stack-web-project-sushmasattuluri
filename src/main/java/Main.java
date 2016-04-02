@@ -83,75 +83,93 @@ public class Main {
                        }
                    });
 
-       //POST JSON
-                       post("api/register", (req, res) -> {
-                             Connection connection = null;
-                             //Testing
-                             System.out.println(req.body());
-                           try {
-                             connection = DatabaseUrl.extract().getConnection();
-                             JSONObject obj = new JSONObject(req.body());
-                             String username = obj.getString("username");
-                             String password = obj.getString("password");
-                             String email = obj.getString("email");
-                             String fname = obj.getString("fname");
-                             String lname = obj.getString("lname");
+      // PST JSON
+             post("/register", (req, res) -> {
+            Map<String, Object> data = new HashMap<>();
+            String firstname=req.queryParams("firstname");
+			String lastname = req.queryParams("lastname");
+			String username=req.queryParams("username");
+			String password = req.queryParams("password");
+			String confpassword=req.queryParams("confpassword");
+			String email = req.queryParams("email");
+			data.put("firstname", firstname);
+			data.put("lastname", lastname);
+			data.put("username", username);
+			data.put("password", password);
+			data.put("confpassword", confpassword);
+			data.put("email", email);
+            return data;
+        }, gson::toJson);
 
-                             String sql = "INSERT INTO users VALUES ('"+ username + "','" + password + "','" + email + "','" + fname + "','"+ lname + "')";
-
-                             connection = DatabaseUrl.extract().getConnection();
-                             Statement stmt = connection.createStatement();
-                             stmt.executeUpdate(sql);
-
-                             ResultSet rs = stmt.executeQuery("SELECT * FROM users where username ='" + username + "'");
-                             Map<String, Object> currentuser = new HashMap<>();
-
-                   					currentuser.put("username", rs.getString("username"));
-                   					currentuser.put("email", rs.getString("email"));
-
-                             return currentuser;
-                           //  return req.body();
-                           } catch (Exception e) {
-                             return e.getMessage();
-                           } finally {
-                             if (connection != null) try{connection.close();} catch(SQLException e){}
-                           }
-                         });
-
-    //get("/hello", (req, res) -> "Hello World");
-
-  /* get("/", (request, response) -> {
-            Map<String, Object> attributes = new HashMap<>();
-            attributes.put("message", "Hello World!");
-            return new ModelAndView(attributes, "index.ftl");
-        }, new FreeMarkerEngine());
-      */
-
-    get("/db", (req, res) -> {
-      Connection connection = null;
-      Map<String, Object> attributes = new HashMap<>();
-      try {
-        connection = DatabaseUrl.extract().getConnection();
-
-        Statement stmt = connection.createStatement();
-        stmt.executeUpdate("CREATE TABLE IF NOT EXISTS ticks (tick timestamp)");
-        stmt.executeUpdate("INSERT INTO ticks VALUES (now())");
-        ResultSet rs = stmt.executeQuery("SELECT tick FROM ticks");
-
-        ArrayList<String> output = new ArrayList<String>();
-        while (rs.next()) {
-          output.add( "Read from DB: " + rs.getTimestamp("tick"));
-        }
-
-        attributes.put("results", output);
-        return new ModelAndView(attributes, "db.ftl");
-      } catch (Exception e) {
-        attributes.put("message", "There was an error: " + e);
-        return new ModelAndView(attributes, "error.ftl");
-      } finally {
-        if (connection != null) try{connection.close();} catch(SQLException e){}
-      }
-    }, new FreeMarkerEngine());
+  //      //POST JSON
+  //                      post("api/register", (req, res) -> {
+  //                            Connection connection = null;
+  //                            //Testing
+  //                            System.out.println(req.body());
+  //                          try {
+  //                            connection = DatabaseUrl.extract().getConnection();
+  //                            JSONObject obj = new JSONObject(req.body());
+  //                            String username = obj.getString("username");
+  //                            String password = obj.getString("password");
+  //                            String email = obj.getString("email");
+  //                            String fname = obj.getString("fname");
+  //                            String lname = obj.getString("lname");
+  //
+  //                            String sql = "INSERT INTO users VALUES ('"+ username + "','" + password + "','" + email + "','" + fname + "','"+ lname + "')";
+  //
+  //                            connection = DatabaseUrl.extract().getConnection();
+  //                            Statement stmt = connection.createStatement();
+  //                            stmt.executeUpdate(sql);
+  //
+  //                            ResultSet rs = stmt.executeQuery("SELECT * FROM users where username ='" + username + "'");
+  //                            Map<String, Object> currentuser = new HashMap<>();
+  //
+  //                  					currentuser.put("username", rs.getString("username"));
+  //                  					currentuser.put("email", rs.getString("email"));
+  //
+  //                            return currentuser;
+  //                          //  return req.body();
+  //                          } catch (Exception e) {
+  //                            return e.getMessage();
+  //                          } finally {
+  //                            if (connection != null) try{connection.close();} catch(SQLException e){}
+  //                          }
+  //                        });
+  //
+  //   //get("/hello", (req, res) -> "Hello World");
+  //
+  // /* get("/", (request, response) -> {
+  //           Map<String, Object> attributes = new HashMap<>();
+  //           attributes.put("message", "Hello World!");
+  //           return new ModelAndView(attributes, "index.ftl");
+  //       }, new FreeMarkerEngine());
+  //     */
+  //
+  //   get("/db", (req, res) -> {
+  //     Connection connection = null;
+  //     Map<String, Object> attributes = new HashMap<>();
+  //     try {
+  //       connection = DatabaseUrl.extract().getConnection();
+  //
+  //       Statement stmt = connection.createStatement();
+  //       stmt.executeUpdate("CREATE TABLE IF NOT EXISTS ticks (tick timestamp)");
+  //       stmt.executeUpdate("INSERT INTO ticks VALUES (now())");
+  //       ResultSet rs = stmt.executeQuery("SELECT tick FROM ticks");
+  //
+  //       ArrayList<String> output = new ArrayList<String>();
+  //       while (rs.next()) {
+  //         output.add( "Read from DB: " + rs.getTimestamp("tick"));
+  //       }
+  //
+  //       attributes.put("results", output);
+  //       return new ModelAndView(attributes, "db.ftl");
+  //     } catch (Exception e) {
+  //       attributes.put("message", "There was an error: " + e);
+  //       return new ModelAndView(attributes, "error.ftl");
+  //     } finally {
+  //       if (connection != null) try{connection.close();} catch(SQLException e){}
+  //     }
+  //   }, new FreeMarkerEngine());
 
   // //  POST JSON
   //   post("api/register", (req, res) -> {
