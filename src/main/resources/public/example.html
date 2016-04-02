@@ -40,7 +40,7 @@
                  });
                }
      function postjson() {
-       //alert("Welcome! You have registered successfully.. not really!");
+       alert("Welcome! You have registered successfully.. not really!");
              //	var obj = JSON.stringify({"make" : $( "#make" ).val()});
             	$.ajax({
              		url : "/api/register",
@@ -48,7 +48,7 @@
                 contentType:'application/json',
              		dataType: "json",
              		data : "123",
-            		success : function(data) {
+            		success : function() {
                   alert("Welcome! You have registered successfully!");
              		}
              	});
