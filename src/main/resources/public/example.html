@@ -39,19 +39,19 @@
                    }
                  });
                }
-     function postjson() {
+//     function postjson() {
              //	var obj = JSON.stringify({"make" : $( "#make" ).val()});
-             	$.ajax({
-             		contentType:'application/json',
-             		url : "/api/inventory/make",
-             		type : "post",
-             		dataType: "json",
-             		data : obj,
-             		success : function(cars) {
-
-             		}
-             	});
-             }
+//             	$.ajax({
+             		//contentType:'application/json',
+  //           		url : "api/register",
+  //           		type : "post",
+             	//	dataType: "json",
+             	//	data : obj,
+  //           		success : function() {
+  //                alert("Welcome! You have registered successfully!");
+  //           		}
+  //           	});
+  //           }
 
         </script>
     </head>
@@ -60,7 +60,7 @@
         <div class="flowers"></div>
         <input type="button" value="GetXml" onclick="getXml()">
         <div class="about"></div>
-        <input type="button" value="postjson" onclick="postjson()">
+    <!--    <input type="button" value="postjson" onclick="postjson()">-->
         <div class="postjson1"></div>
     </body>
 </html>
