@@ -39,12 +39,17 @@
                    }
                  });
                }
-     function postjson() {
+     function function() {
        alert("Welcome! You have registered successfully.. not really!");
-      /*        var username = "123";
-             	var obj = JSON.stringify({"username":username});
-            	$.ajax(
-                  alert("Welcome! You have registered successfully!..inside ajax");
+
+       $("#submit").click(function(){
+
+              var username = $("#username").val();
+              var password = $("#password").val();
+              var obj = JSON.stringify({"username":username,"password":password});
+
+              $.ajax({
+                alert("Welcome! You have registered successfully!..inside ajax");
              		url : "/api/register",
              		type : "POST",
                 contentType:'application/json',
@@ -52,9 +57,11 @@
              		data : obj,
             		success : function(data) {
                   alert("Welcome! You have registered successfully!");
-             		}
-             	});
-      */       }
+                  console.log(data);
+                }
+          	});
+        });
+  });
 
         </script>
     </head>
@@ -63,7 +70,14 @@
         <div class="flowers"></div>
         <input type="button" value="GetXml" onclick="getXml()">
         <div class="about"></div>
-        <input type="button" value="postjson" onclick="postjson()">
-        <div class="postjson1"></div>
+
+<form id="register" method="post" action="#" onSubmit="return submitTest()">
+  <fieldset>
+    <legend>Register</legend>
+        <p><label for="username">Username*</label><input type="text" class="required" name="username" id="username" placeholder="6-12 characters"/></p>
+        <p><label for="password">Password*</label><input type="password" class="required" name="password" id="password" placeholder="8-16 characters"/></p>
+        <p id="rbutton"><input type="submit" value="Submit" id="submit"/></p>
+  </fieldset>
+</form>
     </body>
 </html>

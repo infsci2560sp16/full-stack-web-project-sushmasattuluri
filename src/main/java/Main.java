@@ -122,16 +122,16 @@ public class Main {
 
   //  POST JSON
     post("/api/register", (req, res) -> {
-        //  Connection connection = null;
+          Connection connection = null;
           //Testing
           System.out.println(req.body());
         try {
-  //        connection = DatabaseUrl.extract().getConnection();
-    //      JSONObject obj = new JSONObject(req.body());
-    //      String username= "sushma";
-    //       String password ="password";
-          // String username= obj.getString("username");
-          //String password = obj.getString("password");
+          connection = DatabaseUrl.extract().getConnection();
+          JSONObject obj = new JSONObject(req.body());
+          //String username= "sushma";
+          // String password ="password";
+         String username= obj.getString("username");
+        String password = obj.getString("password");
           // String email = obj.getString("email");
           // String fname = obj.getString("fname");
           // String lname = obj.getString("lname");
@@ -140,20 +140,20 @@ public class Main {
           // String planguage = obj.getString("planguage");
           // String topic = obj.getString("topic");
 
-    //      String sql = "INSERT INTO users (username,password) VALUES ('"+ username + "','" + password + "')";
+          String sql = "INSERT INTO users (username,password) VALUES ('"+ username + "','" + password + "')";
 
-    //      connection = DatabaseUrl.extract().getConnection();
-  //        Statement stmt = connection.createStatement();
-    //      stmt.executeUpdate(sql);
+          connection = DatabaseUrl.extract().getConnection();
+          Statement stmt = connection.createStatement();
+          stmt.executeUpdate(sql);
 
-      //     ResultSet rs = stmt.executeQuery("SELECT * FROM users where username ='" + username + "'");
-        //  Map<String, Object> currentuser = new HashMap<>();
+           ResultSet rs = stmt.executeQuery("SELECT * FROM users where username ='" + username + "'");
+          Map<String, Object> currentuser = new HashMap<>();
 
-			//	 	 currentuser.put("username", rs.getString("username"));
+				 	 currentuser.put("username", rs.getString("username"));
 				// 	// currentuser.put("email", rs.getString("email"));
 
-        //    return currentuser;
-        return req.body();
+            return currentuser;
+        //return req.body();
         } catch (Exception e) {
           return e.getMessage();
         } finally {
