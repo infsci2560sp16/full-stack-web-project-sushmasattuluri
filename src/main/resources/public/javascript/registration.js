@@ -2,6 +2,7 @@ window.onload = init;
 
 $(function(){
         $("#submit").click(function(){
+            alert("XXXX>>>>Welcome! You have registered successfully!");
 
         var username = $("#username").val();
 				var password = $("#password").val();
