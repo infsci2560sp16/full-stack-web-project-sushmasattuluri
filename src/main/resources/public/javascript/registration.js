@@ -5,8 +5,8 @@ function submitTest(){
 		return true;
 }
 
-  $function() {
-       $("#submit").click(function(){
+  $(function() {
+         $("#submit").click(function(){
          alert("Welcome! You have registered successfully.. not really!");
               var username = $("#username").val();
               var password = $("#password").val();
