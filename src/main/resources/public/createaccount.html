@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>MovieClub</title>
+	<link rel="stylesheet" href="stylesheets/styles.css">
+	<script src="javascript/registration.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+</head>
+
+<body>
+
+	<div id="header">
+	<h1><a class="logo" href="index.html">MovieClub</a></h1>
+
+	<div class="center">
+
+		<div id="banner">
+			<div class="banner-container">
+				<input class="main-search__input" id="search-box" placeholder="Search..." value="">
+				<input class="main-search__button" id="search-button" type="submit" value="Search">
+
+ 				<a href="register.html" class="account" id="signup" role="button">Sign up</a>
+ 				<a href="login.html" class="account" id="login" role="button">Log in</a>
+ 			</div>
+
+		</div>
+
+	</div>
+
+	</div>
+
+	<div id="loginbackground">
+
+		<div class="regis-login">
+		  <form>
+		  	<h3>Register</h3>
+		    <br>
+		    <label>First Name</label>
+		    <input type="text" id="firstname" name="firstname">
+
+		    <label>Last Name</label>
+		    <input type="text" id="lastname" name="lastname">
+
+		    <label>Username</label>
+		    <input type="text" id="username" name="username">
+
+		    <label>Password</label>
+		    <input type="text" id="password" name="password">
+
+		    <label>Confirm Password</label>
+		    <input type="text" id="confirmpassword" name="confirmpassword">
+
+		    <label>E-mail Address</label>
+		    <input type="text" id="email" name="emailaddress">
+
+
+		    <input id="regis-login-button" type="button" value="submit" onclick="register()">
+		  </form>
+		</div>
+
+	</div>
+
+
+	<div id="footer">
+	University of Pittsburgh ©pig7
+	</div>
+</body>
+
+</html>
