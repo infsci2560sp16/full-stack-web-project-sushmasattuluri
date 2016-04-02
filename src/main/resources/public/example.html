@@ -41,13 +41,13 @@
                }
      function postjson() {
        alert("Welcome! You have registered successfully.. not really!");
-             //	var obj = JSON.stringify({"make" : $( "#make" ).val()});
-            	$.ajax({
+             	var obj = JSON.stringify("123");
+            	$.ajax(
              		url : "/api/register",
              		type : "POST",
                 contentType:'application/json',
              		dataType: "json",
-             		data : "123",
+             		data : obj,
             		success : function(data) {
                   alert("Welcome! You have registered successfully!");
              		}
