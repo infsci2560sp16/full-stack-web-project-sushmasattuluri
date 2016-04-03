@@ -5,23 +5,36 @@
 	<meta charset="UTF-8">
 	<title>MovieClub</title>
 	<link rel="stylesheet" href="stylesheets/styles.css">
-	<script src="javascript/registration.js"></script>
+	<!-- <script src="javascript/registration.js"></script> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<!-- <script>
-  function register(){
-    alert("XXXXXXXsuccessfully accepted");
-  	var firstname = $("#firstname").val();
-  	var lastname = $("#lastname").val();
-  	var username = $("#username").val();
-  	var password = $("#password").val();
-  	var confpassword = $("#confpassword").val();
-  	var email = $("#email").val();
-  	$.post("/register",{"firstname":firstname,"lastname":lastname,"username":username,"password":password,"confpassword":confirmPassword,"email":email},function(data){
-  	alert("successfully accepted");
-  	window.location.href="/myIndex?username="+JSON.parse(data).username;
-    });
-  }
-  </script> -->
+<script>
+function register(){
+  alert("XXXXXXXsuccessfully accepted");
+	var firstname = $("#firstname").val();
+	var lastname = $("#lastname").val();
+	var username = $("#username").val();
+	var password = $("#password").val();
+	var confpassword = $("#confpassword").val();
+	var email = $("#email").val();
+  alert("XXXXXXX successfully accepted"+ firstname + "  " + lastname+ "  " + username+ "  " + password + "  "+ email);
+
+  var obj = JSON.stringify("firstname":firstname,"lastname":lastname,"username":username,"password":password,"confpassword":confirmPassword,"email":email);
+
+  $.ajax({
+                   contentType:'application/json',
+                   url: "/register",
+                   type: "POST",
+                   datatype: "json",
+                   data: obj,
+                   success: function(data) {
+                       alert("Welcome! You have registered successfully!");
+                       //window.location.href='/index.html';
+ 											console.log(data);
+                   }
+               });
+}
+
+  </script>
 
 </head>
 
@@ -69,7 +82,7 @@
 		    <input type="text" id="confirmpassword" name="confirmpassword">
 
 		    <label>E-mail Address</label>
-		    <input type="text" id="email" name="emailaddress">
+		    <input type="text" id="email" name="email">
 
 
 		    <input id="regis-login-button" type="button" value="submit" onclick="register()">
