@@ -83,7 +83,7 @@ public class Main {
                        }
                    });
 
-      // PST JSON
+      // POST JSON
              post("/register", (req, res) -> {
             Map<String, Object> data = new HashMap<>();
             String firstname=req.queryParams("firstname");
