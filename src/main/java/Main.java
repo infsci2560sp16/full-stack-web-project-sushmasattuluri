@@ -35,6 +35,7 @@ public class Main {
     Gson gson = new Gson();
 
     new FlowerController(new FlowerService());
+     SignIn S=new SignIn();
 
     get("/users", (req, res) -> {
                  ArrayList<String> users = new ArrayList<String>();
@@ -83,24 +84,7 @@ public class Main {
                        }
                    });
 
-      // POST JSON
-      post("/register", (req, res) -> {
-      Map<String, Object> data = new HashMap<>();
-      String firstname=req.queryParams("firstname");
-			String lastname = req.queryParams("lastname");
-			String username=req.queryParams("username");
-			String password = req.queryParams("password");
-			String confpassword=req.queryParams("confpassword");
-			String email = req.queryParams("email");
-			data.put("firstname", firstname);
-			data.put("lastname", lastname);
-			data.put("username", username);
-			data.put("password", password);
-			data.put("confpassword", confpassword);
-			data.put("email", email);
-            return data;
-        }, gson::toJson);
-
+    
   //      //POST JSON
   //                      post("api/register", (req, res) -> {
   //                            Connection connection = null;
