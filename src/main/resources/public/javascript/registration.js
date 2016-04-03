@@ -1,4 +1,5 @@
 function register(){
+  alert("XXXXXXXsuccessfully accepted");
 	var firstname = $("#firstname").val();
 	var lastname = $("#lastname").val();
 	var username = $("#username").val();
