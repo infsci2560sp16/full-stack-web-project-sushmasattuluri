@@ -69,7 +69,6 @@ public class Main {
                                xml += "<Status>9am-8pm</Status>";
                                xml += "<Phone>111-222-3333</Phone>";
                                xml += "<Email>huz26@pitt.edu</Email>";
-
                                xml += "</Branch>";
 
                            xml += "</About>";
