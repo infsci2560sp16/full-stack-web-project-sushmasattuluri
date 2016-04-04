@@ -33,10 +33,11 @@ public class Main {
     staticFileLocation("/public");
 
     Gson gson = new Gson();
-
+//get json
     new StockController(new StockService());
-  //  SignIn S=new SignIn();
+  
 
+//Using freemarker template
     get("/users", (req, res) -> {
                  ArrayList<String> users = new ArrayList<String>();
                  users.add("belowtenthousand");
@@ -46,7 +47,7 @@ public class Main {
                  attributes.put("message", "The more you invest ,the less you pay for fees.");
                   return new ModelAndView(attributes, "users.ftl");
                }, new FreeMarkerEngine());
-
+//get xml
        get("/about", (req, res) -> {
 
                        Connection connection = null;
@@ -82,27 +83,26 @@ public class Main {
                            if (connection != null) try{connection.close();} catch(SQLException e){}
                        }
                    });
-
+//post json
        post("/register", (req, res) -> {
                    Map<String, Object> data = new HashMap<>();
-                  //  String firstname=req.queryParams("firstname");
-                  //  String lastname = req.queryParams("lastname");
-                  //  String username=req.queryParams("username");
-                  //  String password = req.queryParams("password");
-                  //  String confpassword=req.queryParams("confpassword");
-                  //  String email = req.queryParams("email");
-                  //  data.put("firstname", firstname);
-                  //  data.put("lastname", lastname);
-                  //  data.put("username", username);
-                  //  data.put("password", password);
-                  //  data.put("confpassword", confpassword);
-                  //  data.put("email", email);
-                  data.put("username", "Colin");
-                  data.put("password","aaa");
+                   String firstname=req.queryParams("firstname");
+                   String lastname = req.queryParams("lastname");
+                   String username=req.queryParams("username");
+                   String password = req.queryParams("password");
+                   String confpassword=req.queryParams("confpassword");
+                   String email = req.queryParams("email");
+                   data.put("firstname", firstname);
+                   data.put("lastname", lastname);
+                   data.put("username", username);
+                   data.put("password", password);
+                   data.put("confpassword", confpassword);
+                   data.put("email", email);
+
                          return data;
                      }, gson::toJson);
 
-    
+
 
   //      //POST JSON
   //                      post("api/register", (req, res) -> {
