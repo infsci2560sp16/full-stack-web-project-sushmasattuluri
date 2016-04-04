@@ -20,7 +20,7 @@
 			var email = $("#email").val();
 		  alert("XXXXXXX successfully accepted"+ firstname + "  " + lastname+ "  " + username+ "  " + password + "  "+ email);
 
-		  var obj = JSON.stringify("firstname":firstname,"lastname":lastname,"username":username,"password":password,"confpassword":confirmPassword,"email":email);
+		  var obj = JSON.stringify("firstname":firstname,"lastname":lastname,"username":username,"password":password,"confpassword":confpassword,"email":email);
 
 		  $.ajax({
 		                   contentType:'application/json',
@@ -108,8 +108,8 @@
                 <td><input type="number" id="estassets" name="estassets" size="30" required/></td>
 					</tr>-->
 					<tr>
-			         <td><input type="reset" id="reset" class="button4" name="reset"/></td>
-               <td><input type="button" id="submit" class="button5" name="submit" value="Create Account"  onclick="pregister()" /></td>
+			         <td><input type="reset" id="reset" class="button4" name="reset"></td>
+               <td><input type="button" id="submit" class="button5" name="submit" value="Create Account"  onclick="pregister()"></td>
 							<!-- <input id="regis-login-button" type="button" value="submit" onclick="register()">  -->
 					</tr>
 
