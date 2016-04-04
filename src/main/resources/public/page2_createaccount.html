@@ -11,7 +11,7 @@
 
 		<script>
 		function pregister() {
-		  alert("XXXXXXXsuccessfully accepted");
+		//  alert("XXXXXXXsuccessfully accepted");
 			var firstname = $("#firstname").val();
 			var lastname = $("#lastname").val();
 			var username = $("#username").val();
@@ -25,7 +25,7 @@
 		  $.ajax({
 		                   contentType:'application/json',
 		                   url: "/register",
-		                   type: "POST",
+		                   type: "post",
 		                   datatype: "json",
 		                   data: obj,
 		                   success: function(data) {
@@ -109,7 +109,7 @@
 					</tr>-->
 					<tr>
 			         <td><input type="reset" id="reset" class="button4" name="reset"></td>
-               <td><input type="button" id="submit" class="button5" name="submit" value="Create Account"  onclick="pregister()"></td>
+               <td><input type="submit" id="submit" class="button5" name="submit" value="Create Account"  onclick= "pregister()"></td>
 							<!-- <input id="regis-login-button" type="button" value="submit" onclick="register()">  -->
 					</tr>
 

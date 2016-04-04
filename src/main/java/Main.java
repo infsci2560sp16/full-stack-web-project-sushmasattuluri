@@ -83,23 +83,26 @@ public class Main {
                        }
                    });
 
-                   post("/register", (req, res) -> {
+       post("/register", (req, res) -> {
                    Map<String, Object> data = new HashMap<>();
-                   String firstname=req.queryParams("firstname");
-                   String lastname = req.queryParams("lastname");
-                   String username=req.queryParams("username");
-                   String password = req.queryParams("password");
-                   String confpassword=req.queryParams("confpassword");
-                   String email = req.queryParams("email");
-                   data.put("firstname", firstname);
-                   data.put("lastname", lastname);
-                   data.put("username", username);
-                   data.put("password", password);
-                   data.put("confpassword", confpassword);
-                   data.put("email", email);
+                  //  String firstname=req.queryParams("firstname");
+                  //  String lastname = req.queryParams("lastname");
+                  //  String username=req.queryParams("username");
+                  //  String password = req.queryParams("password");
+                  //  String confpassword=req.queryParams("confpassword");
+                  //  String email = req.queryParams("email");
+                  //  data.put("firstname", firstname);
+                  //  data.put("lastname", lastname);
+                  //  data.put("username", username);
+                  //  data.put("password", password);
+                  //  data.put("confpassword", confpassword);
+                  //  data.put("email", email);
+                  data.put("username", "Colin");
+                  data.put("password","aaa");
                          return data;
                      }, gson::toJson);
 
+    
 
   //      //POST JSON
   //                      post("api/register", (req, res) -> {
