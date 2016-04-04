@@ -35,7 +35,7 @@ public class Main {
     Gson gson = new Gson();
 
     new StockController(new StockService());
-   SignIn S=new SignIn();
+  //  SignIn S=new SignIn();
 
     get("/users", (req, res) -> {
                  ArrayList<String> users = new ArrayList<String>();
@@ -61,13 +61,13 @@ public class Main {
 
                                xml += "<Branch>";
                                xml += "<FirstName>Jacob</FirstName>";
-                               xml += "<LastName>Retailer</LastName>";
+                               xml += "<LastName>McCarthy</LastName>";
                                xml += "<Street>35_Highland_Road</Street>";
                                xml += "<Country>United States</Country>";
                                xml += "<State>Pennsylvania</State>";
                                xml += "<City>Pittsburgh</City>";
-                               xml += "<Status>9am-8pm</Status>";
-                               xml += "<Phone>111-222-3333</Phone>";
+                               xml += "<Status>Full-time</Status>";
+                               xml += "<Phone>412-961-2098</Phone>";
                                xml += "<Email>huz26@pitt.edu</Email>";
                                xml += "</Branch>";
 
@@ -82,6 +82,23 @@ public class Main {
                            if (connection != null) try{connection.close();} catch(SQLException e){}
                        }
                    });
+
+                   post("/register", (req, res) -> {
+                   Map<String, Object> data = new HashMap<>();
+                   String firstname=req.queryParams("firstname");
+                   String lastname = req.queryParams("lastname");
+                   String username=req.queryParams("username");
+                   String password = req.queryParams("password");
+                   String confpassword=req.queryParams("confpassword");
+                   String email = req.queryParams("email");
+                   data.put("firstname", firstname);
+                   data.put("lastname", lastname);
+                   data.put("username", username);
+                   data.put("password", password);
+                   data.put("confpassword", confpassword);
+                   data.put("email", email);
+                         return data;
+                     }, gson::toJson);
 
 
   //      //POST JSON

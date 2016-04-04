@@ -2,12 +2,42 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<title>Creating an Account </title>
+		<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet_4.css">
+
 		<script src="javascript/jspracticeformvalidation.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-		<script type="text/javascript" src="javascript/registration.js"></script>
+			<!-- <script type="text/javascript" src="javascript/registration.js"></script> -->
 
-    <title>Creating an Account </title>
-		<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet_4.css">
+		<script>
+		function register(){
+		  alert("XXXXXXXsuccessfully accepted");
+			var firstname = $("#firstname").val();
+			var lastname = $("#lastname").val();
+			var username = $("#username").val();
+			var password = $("#password").val();
+			var confpassword = $("#confpassword").val();
+			var email = $("#email").val();
+		  alert("XXXXXXX successfully accepted"+ firstname + "  " + lastname+ "  " + username+ "  " + password + "  "+ email);
+
+		  var obj = JSON.stringify("firstname":firstname,"lastname":lastname,"username":username,"password":password,"confpassword":confirmPassword,"email":email);
+
+		  $.ajax({
+		                   contentType:'application/json',
+		                   url: "/register",
+		                   type: "POST",
+		                   datatype: "json",
+		                   data: obj,
+		                   success: function(data) {
+		                       alert("Welcome! You have registered successfully!");
+		                       //window.location.href='/index.html';
+		 											console.log(data);
+		                   }
+		               });
+		}
+
+		  </script>
+
 	</head>
 	<body>
 		<header>
@@ -26,7 +56,14 @@
 		<p>Create an account</p>
 		<form>
 				<table class="t2">
-
+					<tr>
+            <td>First name:</td>
+  					<td><input type="text" id="firstname" name="firstname" size="30" required/></td>
+					</tr>
+					<tr>
+              <td>Last name:</td>
+    					<td><input type="text" id="lastname" name="lastname" size="30" required/></td>
+					</tr>
 					<tr>
             <td>Username(6-8 characters):</td>
 						<td><input type="text" id="username" name="username" size="30" required/></td>
@@ -41,14 +78,7 @@
               <td>Confirm Password:</td>
               <td><input type="password" id="confpassword" name="confpassword" size="30" required/></td>
 						</tr>
-					<tr>
-            <td>First name:</td>
-  					<td><input type="text" id="firstname" name="firstname" size="30" required/></td>
-					</tr>
-					<tr>
-              <td>Last name:</td>
-    					<td><input type="text" id="lastname" name="lastname" size="30" required/></td>
-					</tr>
+
 					<tr>
                 <td>Email:</td>
       					<td><input type="text" id="email" name="email" size="30" required/></td>
