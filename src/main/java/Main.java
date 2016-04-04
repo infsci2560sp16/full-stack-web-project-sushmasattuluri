@@ -35,7 +35,7 @@ public class Main {
     Gson gson = new Gson();
 //get json
     new StockController(new StockService());
-  
+
 
 //Using freemarker template
     get("/users", (req, res) -> {
@@ -69,7 +69,7 @@ public class Main {
                                xml += "<City>Pittsburgh</City>";
                                xml += "<Status>Full-time</Status>";
                                xml += "<Phone>412-961-2098</Phone>";
-                               xml += "<Email>huz26@pitt.edu</Email>";
+                               xml += "<Email>VSS9@pitt.edu</Email>";
                                xml += "</Branch>";
 
                            xml += "</About>";
