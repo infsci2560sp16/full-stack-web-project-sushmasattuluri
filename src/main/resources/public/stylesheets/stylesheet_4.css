@@ -1,3 +1,9 @@
+div.stocks{
+  position: left;
+}
+div.about{
+  position: right;
+}
 div.data_from_server {
 
   text-align: center;
