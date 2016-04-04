@@ -2,15 +2,15 @@ import static spark.Spark.*;
 import spark.*;
 import com.google.gson.Gson;
 
-public class FlowerController {
+public class StockController {
 
-  public FlowerController(final FlowerService flowerService) {
+  public StockController(final StockService stockService) {
 
-    get("/flowers", new Route() {
+    get("/stocks", new Route() {
       @Override
       public Object handle(Request request, Response response) {
         // process request
-        return new Gson().toJson(flowerService.getAllFlowers());
+        return new Gson().toJson(stockService.getAllStocks());
       }
     });
 

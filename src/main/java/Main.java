@@ -34,13 +34,13 @@ public class Main {
 
     Gson gson = new Gson();
 
-    new FlowerController(new FlowerService());
+    new StockController(new StockService());
    SignIn S=new SignIn();
 
     get("/users", (req, res) -> {
                  ArrayList<String> users = new ArrayList<String>();
-                 users.add("John Doe");
-                 users.add("Tony Doe");
+                 users.add("belowtenthousand");
+                 users.add("abovetenthousand");
                  Map<String, Object> attributes = new HashMap<>();
                  attributes.put("users", users);
                  attributes.put("message", "The more you invest ,the less you pay for fees.");

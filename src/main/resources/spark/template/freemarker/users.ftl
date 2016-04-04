@@ -33,7 +33,7 @@
 
     <#list users as user>
 
-                      <#if user  == "John Doe" >
+                      <#if user  == "belowtenthousand" >
           <p>Investment less than  $10,000 :</p><br>
           Annual fee = 0.35%
       <#else>

@@ -1,7 +1,7 @@
-public class Flower {
+public class Stock {
 	private String id;
 	private String name;
-	public Flower(String id,String name){
+	public Stock(String id,String name){
 		this.id = id;
 		this.name = name;
 	}
