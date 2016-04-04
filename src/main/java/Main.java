@@ -60,16 +60,16 @@ public class Main {
                            xml += "<About>";
 
                                xml += "<Branch>";
-                               xml += "<Name>Orchid Flower</Name>";
-                               xml += "<Profession>Retailer</Profession>";
-                               xml += "<Since>2016</Since>";
+                               xml += "<FirstName>Jacob</FirstName>";
+                               xml += "<LastName>Retailer</LastName>";
+                               xml += "<Street>35_Highland_Road</Street>";
                                xml += "<Country>United States</Country>";
                                xml += "<State>Pennsylvania</State>";
                                xml += "<City>Pittsburgh</City>";
-                               xml += "<OpenHour>9am-8pm</OpenHour>";
+                               xml += "<Status>9am-8pm</Status>";
                                xml += "<Phone>111-222-3333</Phone>";
                                xml += "<Email>huz26@pitt.edu</Email>";
-                               xml += "<Address>4200 Fifth Ave</Address>";
+
                                xml += "</Branch>";
 
                            xml += "</About>";

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>GetJson</title>
+        <title>GetJson_and_XML</title>
         <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet_4.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
         <script>
@@ -26,16 +27,16 @@
                  success : function(result) {
                    person = result.getElementsByTagName("Branch");
                    $("div.about").append(
-	        	           '<p>Name:'+person[0].childNodes[0].firstChild.nodeValue+'</p>'+
-	        	           '<p>Profession:'+person[0].childNodes[1].firstChild.nodeValue+'</p>'+
-	        	           '<p>Since:'+person[0].childNodes[2].firstChild.nodeValue+'</p>'+
+	        	           '<p>FirstName:'+person[0].childNodes[0].firstChild.nodeValue+'</p>'+
+	        	           '<p>LastName:'+person[0].childNodes[1].firstChild.nodeValue+'</p>'+
+	        	           '<p>Street:'+person[0].childNodes[2].firstChild.nodeValue+'</p>'+
                        '<p>Country:'+person[0].childNodes[3].firstChild.nodeValue+'</p>'+
                        '<p>State:'+person[0].childNodes[4].firstChild.nodeValue+'</p>'+
                        '<p>City:'+person[0].childNodes[5].firstChild.nodeValue+'</p>'+
-                       '<p>OpenHour:'+person[0].childNodes[6].firstChild.nodeValue+'</p>'+
+                       '<p>Status:'+person[0].childNodes[6].firstChild.nodeValue+'</p>'+
                        '<p>Phone:'+person[0].childNodes[7].firstChild.nodeValue+'</p>'+
                        '<p>Email:'+person[0].childNodes[8].firstChild.nodeValue+'</p>'+
-                       '<p>Address:'+person[0].childNodes[9].firstChild.nodeValue+'</p>'
+
                      );
                    }
                  });
@@ -56,9 +57,9 @@
           </ul>
       </nav>
 
-       <input type="button" value="GetJson" onclick="getJson()">
+       <input type="button" value="Stocks selected" onclick="getJson()">
         <div class="stocks"></div>
-        <input type="button" value="GetXml" onclick="getXml()">
+        <input type="button" value="Personal Details" onclick="getXml()">
         <div class="about"></div>
         <footer>
       	Copyright © vistainvestments.com
