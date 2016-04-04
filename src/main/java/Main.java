@@ -84,7 +84,7 @@ public class Main {
                        }
                    });
 //post json
-       post("/register", (req, res) -> {
+       post("/api/register", (req, res) -> {
                    Map<String, Object> data = new HashMap<>();
                    String firstname=req.queryParams("firstname");
                    String lastname = req.queryParams("lastname");
