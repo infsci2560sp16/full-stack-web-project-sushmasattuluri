@@ -87,13 +87,13 @@ public class Main {
        get("/api/register/:firstname", (req, res) -> {
                    Map<String, Object> data = new HashMap<>();
                    String firstname=req.params("firstname");
-                   String lastname = req.params("lastname");
+                  // String lastname = req.params("lastname");
                   //  String username=req.queryParams("username");
                   //  String password = req.queryParams("password");
                   //  String confpassword=req.queryParams("confpassword");
                   //  String email = req.queryParams("email");
                    data.put("firstname", firstname);
-                  data.put("lastname", lastname);
+                //  data.put("lastname", lastname);
                   //  data.put("username", username);
                   //  data.put("password", password);
                   //  data.put("confpassword", confpassword);
@@ -102,6 +102,16 @@ public class Main {
                          return data;
                      }, gson::toJson);
 
+         post("/api/about", (req, res) -> {
+                       Map<String, Object> data = new HashMap<>();
+                       data.put("content1", "Grow your savings to cover 3 to 6 months of unplanned expenses in a conservatively invested portfolio.40%stocks and 60%bonds");
+
+                       data.put("content2", "Invest long-term with a target of $1,827,000 for an annual retirement income of $89,037. This can be a regular investment account, or an IRA account.90%stocks and 10%bonds");
+
+                      data.put("content3", "Grow and preserve capital over time. This is an excellent goal type for unknown future needs or money you plan to pass to future generations.80%stocks and 20%bonds");
+
+                      return data;
+                        }, gson::toJson);
 
 
   //      //POST JSON
@@ -228,16 +238,6 @@ public class Main {
   //               }, gson::toJson);
    //
    //
-    post("/api/about", (req, res) -> {
-                                Map<String, Object> data = new HashMap<>();
-                              data.put("content1", "Grow your savings to cover 3 to 6 months of unplanned expenses in a conservatively invested portfolio.40%stocks and 60%bonds");
-
-                              data.put("content2", "Invest long-term with a target of $1,827,000 for an annual retirement income of $89,037. This can be a regular investment account, or an IRA account.90%stocks and 10%bonds");
-
-                              data.put("content3", "Grow and preserve capital over time. This is an excellent goal type for unknown future needs or money you plan to pass to future generations.80%stocks and 20%bonds");
-
-                                return data;
-                            }, gson::toJson);
 
    //
 

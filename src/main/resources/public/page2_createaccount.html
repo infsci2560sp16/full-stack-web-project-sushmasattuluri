@@ -11,26 +11,25 @@
 
 		<script>
 		function pregister() {
-	
+
 			var firstname = $("input#firstname").val();
-			var lastname = $("input#lastname").val();
+			//var lastname = $("input#lastname").val();
 			// var username = $("input#username").val();
 			// var password = $("input#password").val();
 			// var confpassword = $("input#confpassword").val();
 			// var email = $("input#email").val();
 		  // alert("XXXXXXX successfully accepted"+ firstname + "  " + lastname+ "  " + username+ "  " + password + "  "+ email);
-//    ,"username":username,"password":password,"confpassword":confpassword,"email":email
-		 var obj = JSON.stringify("firstname":firstname,"lastname":lastname);
+		 //var obj = JSON.stringify("firstname":firstname);
 
 		  $.ajax({
 		                   contentType:'application/json',
 		                   url: "/api/register/"+firstname,
 		                   type: "get",
 		                   datatype: "json",
-		                   data: obj,
+		                   data: firstname,
 		                   success: function(data) {
 		                       alert("Welcome! You have registered successfully!");
-		                       window.location.href='/page3_welcome.html';
+		                      // window.location.href='/index.html';
 		 											console.log(data);
 		                   }
 		               });
