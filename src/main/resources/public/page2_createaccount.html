@@ -11,26 +11,26 @@
 
 		<script>
 		function pregister() {
-		//  alert("XXXXXXXsuccessfully accepted");
-			var firstname = $("#firstname").val();
-			var lastname = $("#lastname").val();
-			var username = $("#username").val();
-			var password = $("#password").val();
-			var confpassword = $("#confpassword").val();
-			var email = $("#email").val();
-		  alert("XXXXXXX successfully accepted"+ firstname + "  " + lastname+ "  " + username+ "  " + password + "  "+ email);
-
-		  var obj = JSON.stringify("firstname":firstname,"lastname":lastname,"username":username,"password":password,"confpassword":confpassword,"email":email);
+	
+			var firstname = $("input#firstname").val();
+			var lastname = $("input#lastname").val();
+			// var username = $("input#username").val();
+			// var password = $("input#password").val();
+			// var confpassword = $("input#confpassword").val();
+			// var email = $("input#email").val();
+		  // alert("XXXXXXX successfully accepted"+ firstname + "  " + lastname+ "  " + username+ "  " + password + "  "+ email);
+//    ,"username":username,"password":password,"confpassword":confpassword,"email":email
+		 var obj = JSON.stringify("firstname":firstname,"lastname":lastname);
 
 		  $.ajax({
 		                   contentType:'application/json',
-		                   url: "/api/register",
-		                   type: "post",
+		                   url: "/api/register/"+firstname,
+		                   type: "get",
 		                   datatype: "json",
 		                   data: obj,
 		                   success: function(data) {
 		                       alert("Welcome! You have registered successfully!");
-		                       //window.location.href='/index.html';
+		                       window.location.href='/page3_welcome.html';
 		 											console.log(data);
 		                   }
 		               });

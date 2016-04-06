@@ -10,6 +10,7 @@
       function getJson() {
           $.ajax({
             url : "/stocks",
+            
             success : function(result) {
               var stocks = JSON.parse(result);
               for ( var i = 0; i < stocks.length; i++) {
@@ -61,7 +62,7 @@
         <div class="stocks"></div>
         <input type="button" value="Personal Details" onclick="getXml()">
         <div class="about"></div>
-        
+
         <footer>
       	Copyright © vistainvestments.com
       	</footer>
