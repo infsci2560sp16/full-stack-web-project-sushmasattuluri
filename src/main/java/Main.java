@@ -102,7 +102,7 @@ public class Main {
                          return data;
                      }, gson::toJson);
 
-
+//post json
          post("/api/about", (req, res) -> {
                        Map<String, Object> data = new HashMap<>();
                        data.put("content1", "Grow your savings to cover 3 to 6 months of unplanned expenses in a conservatively invested portfolio.40%stocks and 60%bonds");
